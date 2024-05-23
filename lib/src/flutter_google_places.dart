@@ -292,7 +292,7 @@ class _AppBarPlacesAutoCompleteTextFieldState
           autofocus: true,
           style: widget.textStyle ?? _defaultStyle(),
           decoration:
-              widget.textDecoration ?? _defaultDecoration(state.widget.hint),
+          widget.textDecoration ?? _defaultDecoration(state.widget.hint),
         ));
   }
 
@@ -432,9 +432,11 @@ abstract class PlacesAutocompleteState extends State<PlacesAutocompleteWidget> {
         radius: widget.radius,
         language: widget.language,
         sessionToken: widget.sessionToken,
-        types: widget.types,
-        components: widget.components,
-        strictbounds: widget.strictbounds,
+        types: widget.types!,
+
+        components: widget.components!,
+
+        strictbounds: widget.strictbounds!,
         region: widget.region,
       );
 
@@ -517,26 +519,26 @@ class PlacesAutocomplete {
     String startText = "",
   }) {
     final builder = (BuildContext ctx) => PlacesAutocompleteWidget(
-          apiKey: apiKey,
-          mode: mode,
-          overlayBorderRadius: overlayBorderRadius,
-          language: language,
-          sessionToken: sessionToken,
-          components: components,
-          types: types,
-          location: location,
-          radius: radius,
-          strictbounds: strictbounds,
-          region: region,
-          offset: offset,
-          hint: hint,
-          logo: logo,
-          onError: onError,
-          proxyBaseUrl: proxyBaseUrl,
-          httpClient: httpClient as BaseClient?,
-          startText: startText,
-          decoration: decoration,
-        );
+      apiKey: apiKey,
+      mode: mode,
+      overlayBorderRadius: overlayBorderRadius,
+      language: language,
+      sessionToken: sessionToken,
+      components: components,
+      types: types,
+      location: location,
+      radius: radius,
+      strictbounds: strictbounds,
+      region: region,
+      offset: offset,
+      hint: hint,
+      logo: logo,
+      onError: onError,
+      proxyBaseUrl: proxyBaseUrl,
+      httpClient: httpClient as BaseClient?,
+      startText: startText,
+      decoration: decoration,
+    );
 
     return showDialog(
       context: context,
