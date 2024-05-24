@@ -187,7 +187,7 @@ class LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
         types: widget.types,
         strictbounds: widget.strictbounds,
         overlayBorderRadius: widget.overlayBorderRadius,
-        textStyle: widget.textStyle,
+
       );
 
   Future<void> _handleTap() async {
